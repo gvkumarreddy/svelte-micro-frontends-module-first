@@ -1,6 +1,6 @@
 <script>
    
-   import DraggableModal from '../../lib/DraggableModal/index.svelte';
+   import DraggableModal from '../../../lib/Draggable/index.svelte';
 
     let showModal = false;
 
@@ -9,8 +9,10 @@
     }
 </script>
 
-<div>Another content</div>
-<button style="width: 150px" on:click={toggleModal} >Show Modal</button>
+<div>Sub-module content</div>
+<br />
+<p>This sub-module can use the common components from the app shell</p>
+<button style="width: 150px" on:click={toggleModal} >{showModal ? 'Hide Modal' : 'Show Modal'}</button>
 {#if showModal}
 <DraggableModal left={200} top={200} title="Drag Me">
     Draggable Modal Content
